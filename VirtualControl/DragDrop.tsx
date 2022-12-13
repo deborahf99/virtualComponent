@@ -37,7 +37,7 @@ export default function DragDropFile() {
     }
   };
   
-// triggers the input when the button is clicked
+// triggers the input when the button is clicked.
   const onButtonClick = () => {
     inputRef.current.click();
   };

@@ -3,8 +3,9 @@
   width: 28rem;
   max-width: 100%;
   text-align: center;
-  position: relative;
-
+  position: fixed;
+  margin-left: 20%;
+  margin-top: 10px;
 }
 
 #header{
@@ -25,6 +26,11 @@
   border-style: dashed;
   border-color:slategrey;
   background-color: white;
+}
+
+#file-pic{
+    height: 10rem;
+    border-color: black;
 }
 
 .upload-button {

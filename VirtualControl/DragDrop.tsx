@@ -8,7 +8,7 @@ export default function DragDropFile() {
   const [dragActive, setDragActive] = React.useState(false);
   const [fileList, setFiles] = useState<FileList | null>(null);
   // ref
-  const inputRef = React.useRef(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
   
   // handle drag events
   const handleDrag = function(e : any) {
@@ -21,13 +21,16 @@ export default function DragDropFile() {
     }
   };
   
+  const handleFile = function(files : any) {
+    alert("Number of files: " + files.length);
+  }
   // triggers when file is dropped
   const handleDrop = function(e : any) {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      // handleFiles(e.dataTransfer.files);
+      setFiles(e.dataTransfer.files);
     }
   };
   
@@ -39,10 +42,12 @@ export default function DragDropFile() {
     }
   };
   
-  const files = fileList ? [...fileList] : [];
+  const files = fileList ? [...Array.prototype.slice.call(fileList)] : [];
 // triggers the input when the button is clicked.
   const onButtonClick = () => {
-    inputRef.current.click();
+    if(inputRef.current != null){
+      inputRef.current.click();
+    }
   };
   
   return (
@@ -66,14 +71,17 @@ export default function DragDropFile() {
             <button style={{width: "35%", height: "15%", marginRight: "10px", backgroundColor: "white", borderRadius: "6px"}}>Cancel</button>
             <button style={{width: "35%", height: "15%", backgroundColor: "black", color:"white", borderRadius: "6px"}}>Attach files</button>
         </form>
-        <div style={{position: "fixed", marginTop: "30%"}}>
-            <ul>
-                {files.map((file, i) => (
-                    <li key={i}>
-                        {file.name} - {file.type}
-                    </li>
-                ))}
-            </ul>
+        <div style={{position: "fixed", marginTop: "30%", marginLeft: "10%", textAlign: "left"}}>
+            <table style={{fontWeight: "lighter"}}>
+                <th>
+                    {files.map((file, i) => (
+                      <tr key={i}>
+                          {file.name}
+                      </tr>
+                    ))}
+                  
+                </th>
+            </table>
         </div>
     </div>
   );

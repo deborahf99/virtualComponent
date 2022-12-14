@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import './App.css';
 
 export default function DragDropFile() {
@@ -65,4 +65,4 @@ export default function DragDropFile() {
 		</div>
     </div>
   );
-}
+}*/

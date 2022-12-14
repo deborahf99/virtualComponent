@@ -20,10 +20,7 @@ export default function DragDropFile() {
       setDragActive(false);
     }
   };
-  
-  const handleFile = function(files : any) {
-    alert("Number of files: " + files.length);
-  }
+
   // triggers when file is dropped
   const handleDrop = function(e : any) {
     e.preventDefault();

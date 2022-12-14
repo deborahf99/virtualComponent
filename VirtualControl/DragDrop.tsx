@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 import {NeutralColors} from "@fluentui/theme";
 import { ChangeEvent, useState } from 'react';
+import { Card, CardPreview, CardHeader, CardFooter } from "@fluentui/react-components/unstable";
 
 export default function DragDropFile() {
     // drag state
@@ -69,14 +70,15 @@ export default function DragDropFile() {
             <button style={{width: "35%", height: "15%", backgroundColor: "black", color:"white", borderRadius: "6px"}}>Attach files</button>
         </form>
         <div style={{position: "fixed", marginTop: "30%", marginLeft: "10%", textAlign: "left"}}>
-            <table style={{fontWeight: "lighter"}}>
-                <th>
-                    {files.map((file, i) => (
-                      <tr key={i}>
+            <table>
+                <th>             
+                  {files.map((file, i) => (
+                    <tr key={i}>
+                      <td style={{fontWeight: "lighter"}}>
                           {file.name}
-                      </tr>
+                      </td>
+                    </tr>
                     ))}
-                  
                 </th>
             </table>
         </div>

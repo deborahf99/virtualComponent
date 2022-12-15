@@ -57,3 +57,26 @@
 .upload-button:hover {
   text-decoration-line: underline;
 }
+
+#cancel-button{
+  width: 35%;
+  height: 15%;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+th, td {
+  border: 1px solid black;
+  border-radius: 6px;
+  height: 15%;
+}
+
+#attach-button{
+  width: 35%;
+  height: 15%;
+  margin-right: 10px;
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+}

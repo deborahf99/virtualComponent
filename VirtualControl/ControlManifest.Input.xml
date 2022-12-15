@@ -38,6 +38,7 @@
       <css path="css/VirtualControl.css" order="1" />
       <resx path="strings/VirtualControl.1033.resx" version="1.0.0" />
       -->
+      <css path="assets/css/App.css" order="1" />
     </resources>
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
     <feature-usage>

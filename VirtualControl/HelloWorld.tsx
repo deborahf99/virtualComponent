@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Label } from '@fluentui/react';
 import {useRef, useState} from "react";
-import "./App.css";
+import "./assets/css/App.css";
 import DragDrop from "./DragDrop";
 
 export interface IHelloWorldProps {

@@ -1,11 +1,10 @@
 #form-file-upload {
-  height: 16rem;
-  width: 50rem;
-  max-width: 100%;
   text-align: center;
-  position: fixed;
-  margin-left: 10%;
-  margin-top: 10px;
+  padding: 20px;
+  border: 2px gray dashed;
+  border-radius: 6px;
+  width: 60%;
+  margin: auto;
 }
 
 #drag-file-element {
@@ -59,24 +58,27 @@
 }
 
 #cancel-button{
-  width: 35%;
-  height: 15%;
-  margin-right: 10px;
+  width: 25%;
+  height: 10%;
   background-color: white;
   border-radius: 6px;
+  border: 1px solid gray;
 }
 
 th, td {
   border: 1px solid black;
   border-radius: 6px;
-  height: 15%;
+  padding: 25px;
 }
 
+table{
+  width: 155%;
+}
 #attach-button{
-  width: 35%;
-  height: 15%;
-  margin-right: 10px;
+  width: 25%;
+  height: 10%;
   background-color: black;
   border-radius: 6px;
   color: white;
+  margin-left: 10px;
 }

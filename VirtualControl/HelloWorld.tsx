@@ -1,18 +1,17 @@
-import * as React from 'react';
-import { Label } from '@fluentui/react';
-import {useRef, useState} from "react";
+import * as React from "react";
 import "./assets/css/App.css";
-import DragDrop from "./DragDrop";
+import Dropzone from "./DragDropFile";
 
 export interface IHelloWorldProps {
   name?: string;
 }
 
-export class HelloWorld extends React.Component<IHelloWorldProps> {
+
+export class HelloWorld extends React.Component {
   public render(): React.ReactNode {
     return (
       <div>
-        <DragDrop/>
+        <Dropzone />
       </div>
     );
   }
